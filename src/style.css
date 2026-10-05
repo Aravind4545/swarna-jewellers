@@ -2427,7 +2427,7 @@ button {
 .showcase-img-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 3 / 4;
   background: #060608;
   overflow: hidden;
 }
@@ -2437,6 +2437,7 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -2604,7 +2605,7 @@ button {
     padding: 3.5rem 0;
   }
   .showcase-img-box {
-    aspect-ratio: 16 / 11;
+    aspect-ratio: 3 / 4;
   }
   .showcase-caption {
     flex-direction: column;
