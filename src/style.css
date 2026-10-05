@@ -68,7 +68,7 @@ html {
   background-color: var(--bg-deep);
   color: var(--text-ivory);
   overflow-x: hidden;
-  max-width: 100%;
+  max-width: 100vw;
   width: 100%;
 }
 
@@ -78,7 +78,7 @@ body.royal-body {
   color: var(--text-ivory);
   line-height: 1.6;
   overflow-x: hidden;
-  max-width: 100%;
+  max-width: 100vw;
   width: 100%;
   position: relative;
   -webkit-font-smoothing: antialiased;
@@ -121,16 +121,22 @@ button {
 .container {
   width: 100%;
   max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   position: relative;
   z-index: 1;
   box-sizing: border-box;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .container {
-    padding: 0 1.1rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -718,6 +724,16 @@ button {
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
   white-space: nowrap;
   text-decoration: none;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-royal-primary.full-width {
+  white-space: normal;
+  text-align: center;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  line-height: 1.3;
 }
 
 .btn-royal-primary:hover {
@@ -1069,24 +1085,19 @@ button {
 }
 
 @media (max-width: 992px) {
-  .nav-links, .nav-calc-btn, .nav-icon-btn {
-    display: none;
+  .nav-links, .nav-calc-btn, .nav-icon-btn, .navbar-actions .btn-royal-primary {
+    display: none !important;
   }
   .mobile-toggle {
     display: flex;
   }
-}
-
-@media (max-width: 640px) {
   .royal-navbar .container {
-    padding: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .navbar-inner {
     padding: 0.75rem 0;
     gap: 0.5rem;
-  }
-  .navbar-actions .btn-royal-primary {
-    display: none;
   }
   .brand-crest-wrapper {
     width: 36px;
@@ -1566,15 +1577,24 @@ button {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 3rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
   .calc-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .calc-luxury-card {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -1582,12 +1602,20 @@ button {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .calc-group {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .calc-label {
@@ -1602,6 +1630,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .weight-input-box {
@@ -1612,6 +1644,8 @@ button {
   border: 1px solid rgba(212, 175, 55, 0.4);
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-sm);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .weight-input-box input {
@@ -1632,8 +1666,11 @@ button {
 
 .calc-pill-group {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .pill-btn {
@@ -1646,6 +1683,16 @@ button {
   border-radius: var(--radius-md);
   text-align: left;
   transition: var(--transition-smooth);
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .pill-btn {
+    padding: 0.6rem 0.5rem;
+  }
 }
 
 .pill-btn:hover {
@@ -1663,6 +1710,10 @@ button {
   font-size: 0.92rem;
   font-weight: 700;
   color: var(--text-pure);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .pill-btn.active .pill-title {
@@ -1672,6 +1723,10 @@ button {
 .pill-sub {
   font-size: 0.72rem;
   color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 /* Range Slider */
@@ -1852,12 +1907,21 @@ button {
   flex-wrap: wrap;
   gap: 0.6rem;
   margin-bottom: 3.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
+  .section-collections {
+    overflow-x: hidden;
+  }
   .category-tabs {
     flex-wrap: nowrap;
     overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     justify-content: flex-start;
     padding: 0.25rem 0.5rem 0.75rem;
     margin-bottom: 2rem;
@@ -2644,8 +2708,29 @@ button {
 }
 
 @media (max-width: 768px) {
+  .section-appointment {
+    padding: 3.5rem 0;
+  }
   .appointment-box {
-    padding: 1.75rem;
+    padding: 1.5rem 1rem 4rem;
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .appointment-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  .appointment-heading {
+    font-size: 1.65rem;
+  }
+  .appointment-desc {
+    font-size: 0.88rem;
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -2698,17 +2783,24 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .form-row {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
@@ -2783,9 +2875,47 @@ button {
   flex-direction: column;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .section-contact {
+    padding: 3.5rem 0;
+  }
   .contact-card {
-    padding: 1.75rem;
+    padding: 1.5rem 1rem 4rem;
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .contact-heading {
+    font-size: 1.65rem;
+  }
+  .contact-item {
+    gap: 0.85rem;
+  }
+  .contact-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .phone-link {
+    font-size: 0.95rem;
+  }
+  .contact-item a[href^="mailto:"] {
+    font-size: 0.82rem;
+  }
+  .contact-cta-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .contact-cta-btns .btn-royal-primary,
+  .contact-cta-btns .btn-royal-outline,
+  .contact-cta-btns .btn-royal-glass {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
   }
 }
 
@@ -2808,6 +2938,16 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-item > div:last-child {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-icon {
@@ -2834,6 +2974,8 @@ button {
 .contact-item p {
   font-size: 0.88rem;
   color: var(--text-muted);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .link-directions {
@@ -2854,6 +2996,8 @@ button {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--gold-300);
+  overflow-wrap: anywhere;
+  word-break: break-all;
 }
 
 .phone-link:hover {
@@ -2879,10 +3023,28 @@ button {
   border: 1.5px solid rgba(212, 175, 55, 0.35);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
   min-height: 450px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .map-card {
+    min-height: 280px;
+    height: 280px;
+  }
+  .map-badge-overlay {
+    bottom: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.75rem;
+  }
 }
 
 .map-card iframe {
-  filter: grayscale(80%) invert(90%) contrast(1.2);
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .map-badge-overlay {
@@ -3042,11 +3204,23 @@ button {
   z-index: 9998;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .floating-concierge {
-    bottom: 1.25rem;
-    right: 1.25rem;
-    gap: 0.65rem;
+    bottom: 1rem;
+    right: 0.85rem;
+    gap: 0.55rem;
+  }
+  .concierge-btn {
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  }
+  .concierge-btn svg, .concierge-btn i {
+    width: 20px;
+    height: 20px;
+  }
+  .concierge-tooltip {
+    display: none !important;
   }
 }
 
@@ -3127,12 +3301,16 @@ button {
   justify-content: center;
   padding: 1.5rem;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .royal-modal.active {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -3264,12 +3442,18 @@ button {
 /* Modal Calculator Specific Styles */
 .modal-calc-dialog {
   max-width: 960px;
+  width: 100%;
   padding: 2.5rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
   .modal-calc-dialog {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -3282,28 +3466,42 @@ button {
     max-height: 92vh;
     border-radius: 16px 16px 0 0;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
   .modal-calc-dialog {
     padding: 1.25rem 0.85rem 1.75rem;
+    width: 100%;
+    max-width: 100%;
   }
   .modal-detail-grid {
     padding: 1.25rem 0.85rem 1.5rem;
     gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .modal-media-wrap {
     height: 200px;
   }
   .calc-luxury-card {
     padding: 1rem 0.75rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .summary-card-inner {
-    padding: 1.25rem 1rem;
+    padding: 1.25rem 0.85rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .pill-btn {
-    padding: 0.65rem 0.75rem;
+    padding: 0.55rem 0.5rem;
   }
   .pill-title {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
   }
 }
 
