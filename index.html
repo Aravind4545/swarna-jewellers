@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swarna Jewellers | Royal 22K BIS Hallmarked Gold & Certified Diamonds | Visakhapatnam</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover royal heirloom jewellery at Swarna Jewellers, Gopalapatnam, Visakhapatnam. 100% BIS 916 Hallmarked Gold, Certified Diamonds, Bridal Masterpieces, and bespoke royal craftsmanship.">
+  <meta name="keywords" content="Swarna Jewellers, Jewellers in Visakhapatnam, BIS 916 Hallmarked Gold, Bridal Jewellery Vizag, Gopalapatnam Jewellers, Diamond Jewellery, Gold Rate Vizag">
+  <meta name="author" content="Swarna Jewellers">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Swarna Jewellers | The Royal House of Hallmarked Gold & Diamonds">
+  <meta property="og:description" content="Elegance Beyond Time. Handcrafted 22K BIS 916 Hallmarked Gold and certified diamonds in Gopalapatnam, Visakhapatnam.">
+  <meta property="og:image" content="/assets/logo-banner.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/icon-transparent.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="royal-body">
+  
+
+
+  <!-- ========================================================
+       JAW-DROPPING ROYAL INTRO EXPERIENCE OVERLAY
+       ======================================================== -->
+  <section id="royal-intro-overlay" class="royal-intro" aria-label="Royal Introduction">
+    <!-- Starry & Golden Dust Particle Canvas -->
+    <canvas id="intro-particles" class="intro-canvas"></canvas>
+
+    <!-- Ambient Luxury Gold Lights -->
+    <div class="ambient-glow glow-center"></div>
+    <div class="ambient-glow glow-top"></div>
+
+    <div class="intro-content">
+      <!-- Sacred Geometry Royal Ring / Mandala -->
+      <div class="mandala-ring-wrapper">
+        <svg class="mandala-svg spinning-slow" viewBox="0 0 300 300">
+          <circle cx="150" cy="150" r="140" stroke="url(#goldGrad)" stroke-width="1.5" fill="none" stroke-dasharray="4 6" opacity="0.6"/>
+          <circle cx="150" cy="150" r="120" stroke="url(#goldGrad)" stroke-width="1" fill="none" opacity="0.4"/>
+          <circle cx="150" cy="150" r="100" stroke="url(#goldGrad)" stroke-width="1.5" fill="none" stroke-dasharray="12 4" opacity="0.7"/>
+          <!-- Sunburst Ray Accents -->
+          <g stroke="url(#goldGrad)" stroke-width="1" opacity="0.5">
+            <line x1="150" y1="5" x2="150" y2="25" />
+            <line x1="150" y1="275" x2="150" y2="295" />
+            <line x1="5" y1="150" x2="25" y2="150" />
+            <line x1="275" y1="150" x2="295" y2="150" />
+            <line x1="47" y1="47" x2="62" y2="62" />
+            <line x1="238" y1="238" x2="253" y2="253" />
+            <line x1="47" y1="253" x2="62" y2="238" />
+            <line x1="238" y1="62" x2="253" y2="47" />
+          </g>
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#AA771C" />
+              <stop offset="35%" stop-color="#FCF6BA" />
+              <stop offset="65%" stop-color="#BF953F" />
+              <stop offset="100%" stop-color="#FBF5B7" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <!-- Center Golden Crest -->
+        <div class="intro-emblem-core">
+          <img src="/assets/icon-transparent.png" alt="Swarna Jewellers Emblem" class="intro-emblem-img shine-effect">
+          <div class="emblem-halo"></div>
+        </div>
+      </div>
+
+      <!-- Royal Royal Introduction Copy -->
+      <div class="intro-text-block">
+        <p class="intro-sub-crest">WELCOME TO THE ROYAL HOUSE OF</p>
+        <h1 class="intro-title gold-text-gradient">SWARNA JEWELLERS</h1>
+        <div class="intro-divider">
+          <span class="divider-gem">◆</span>
+        </div>
+        <p class="intro-tagline">ROYAL CRAFTSMANSHIP • 100% BIS 916 HALLMARKED GOLD • TIMELESS PURITY</p>
+        <p class="intro-location">GOPALAPATNAM • VISAKHAPATNAM</p>
+      </div>
+
+      <!-- Interactive Royal Enter Button -->
+      <div class="intro-actions">
+        <button id="btn-enter-realm" class="btn-royal-vault">
+          <span class="btn-vault-text">ENTER THE ROYAL REALM</span>
+          <span class="btn-vault-glow"></span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <div class="auto-enter-status">
+          <div class="timer-bar-wrap">
+            <div id="intro-timer-bar" class="timer-bar-fill"></div>
+          </div>
+          <span class="timer-label">Entering in <span id="intro-timer-seconds">3</span>s or tap anywhere</span>
+        </div>
+      </div>
+
+      <!-- Skip Intro Pill -->
+      <button id="btn-skip-intro" class="skip-intro-btn">Skip Intro ✕</button>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       PRIMARY ROYAL NAVIGATION BAR (EXPANDED LUXURY)
+       ======================================================== -->
+  <nav class="royal-navbar" id="navbar">
+    <div class="container navbar-inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="Swarna Jewellers Home">
+        <div class="brand-crest-wrapper">
+          <img src="/assets/icon-transparent.png" alt="Swarna Logo Crest" class="navbar-icon">
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">SWARNA</span>
+          <span class="brand-subtitle">JEWELLERS • ESTD 1998</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#collections" class="nav-link"><span class="nav-link-text">Collections</span></a></li>
+        <li><a href="#showroom" class="nav-link"><span class="nav-link-text">Showroom</span></a></li>
+        <li><a href="#testimonials" class="nav-link"><span class="nav-link-text">Testimonials</span></a></li>
+        <li><a href="#contact" class="nav-link"><span class="nav-link-text">Contact</span></a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="navbar-actions">
+        <button id="btn-replay-intro" class="nav-icon-btn" title="Replay Royal Cinematic Intro" aria-label="Replay Intro">
+          <i data-lucide="sparkles" class="icon-xs text-gold"></i>
+        </button>
+        <button id="btn-open-calc" class="nav-calc-btn" data-open-calc title="Open Quick Gold Rate Estimator">
+          <i data-lucide="calculator" class="icon-xs text-gold"></i>
+          <span>Rate Estimator</span>
+        </button>
+        <a href="https://wa.me/918801535666?text=Hello%20Swarna%20Jewellers,%20I%20would%20like%20to%20book%20a%20private%20VIP%20jewellery%20viewing%20at%20your%20Gopalapatnam%20showroom." target="_blank" rel="noopener noreferrer" class="btn-royal-primary">
+          <span>VIP Viewing</span>
+          <i data-lucide="calendar" class="icon-xs"></i>
+        </a>
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-nav-drawer" class="mobile-nav">
+      <ul class="mobile-nav-links">
+        <li><a href="#collections" class="mobile-link">Signature Collections</a></li>
+        <li><a href="#hallmarks" class="mobile-link">The 4 Purity Hallmarks</a></li>
+        <li><button type="button" class="mobile-link mobile-btn-link" data-open-calc>Gold Rate Estimator</button></li>
+        <li><a href="#showroom" class="mobile-link">The Gopalapatnam Showroom</a></li>
+        <li><a href="#testimonials" class="mobile-link">Customer Praises</a></li>
+        <li><a href="#contact" class="mobile-link">Visit & Contact Us</a></li>
+      </ul>
+      <div class="mobile-cta-box">
+        <a href="tel:8801535666" class="btn-royal-outline">
+          <i data-lucide="phone-call" class="icon-sm"></i> Call 88015 35666
+        </a>
+        <a href="https://wa.me/918801535666?text=Namaste%20Swarna%20Jewellers,%20I%20would%20like%20to%20enquire%20about%20your%20jewellery%20collections." target="_blank" class="btn-royal-primary">
+          <i data-lucide="message-circle" class="icon-sm"></i> WhatsApp Concierge
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================
+       HERO SECTION: WHERE HERITAGE MEETS ROYALTY
+       ======================================================== -->
+  <section class="royal-hero" id="home">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      
+      <!-- Left Content Column -->
+      <div class="hero-content">
+        <div class="hero-royal-crest-tag">
+          <span class="crest-sparkle">✦</span>
+          <span>ESTEEMED JEWELLERS OF VISAKHAPATNAM</span>
+          <span class="crest-sparkle">✦</span>
+        </div>
+
+        <h1 class="hero-heading">
+          Elegance Beyond Time.<br>
+          <span class="gold-text-gradient">Royalty In Pure Gold.</span>
+        </h1>
+
+        <p class="hero-description">
+          Mastercrafted 22K BIS 916 Hallmarked Gold and IGI Certified Diamonds. Curated for majestic bridal celebrations, timeless heirlooms, and precious life milestones.
+        </p>
+
+        <!-- CTA Group -->
+        <div class="hero-cta-group">
+          <a href="#collections" class="btn-royal-hero">
+            <span class="btn-label">EXPLORE SIGNATURE COLLECTIONS</span>
+            <i data-lucide="chevron-right" class="icon-md"></i>
+          </a>
+          <a href="https://wa.me/918801535666?text=Hello%20Swarna%20Jewellers,%20I%20want%20to%20enquire%20about%20the%20Bridal%20Necklace%20Collection." target="_blank" rel="noopener noreferrer" class="btn-royal-glass">
+            <i data-lucide="message-circle" class="icon-md text-gold"></i>
+            <span>Chat With Master Karigar</span>
+          </a>
+        </div>
+
+        <!-- 4 Key Highlights Row (Short & Punchy) -->
+        <div class="hero-highlights-strip">
+          <div class="highlight-item">
+            <div class="highlight-number gold-text-gradient">100%</div>
+            <div class="highlight-label">BIS 916 Hallmark</div>
+          </div>
+          <div class="highlight-separator"></div>
+          <div class="highlight-item">
+            <div class="highlight-number gold-text-gradient">25+</div>
+            <div class="highlight-label">Years of Heritage</div>
+          </div>
+          <div class="highlight-separator"></div>
+          <div class="highlight-item">
+            <div class="highlight-number gold-text-gradient">10K+</div>
+            <div class="highlight-label">Heirloom Designs</div>
+          </div>
+          <div class="highlight-separator"></div>
+          <div class="highlight-item">
+            <div class="highlight-number gold-text-gradient">0%</div>
+            <div class="highlight-label">Hidden Charges</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Authentic Signature Necklace Piece -->
+      <div class="hero-showpiece-wrapper">
+        <div class="showpiece-card" id="hero-3d-card">
+          <div class="showpiece-badge-royal">
+            <span>SIGNATURE HEIRLOOM MASTERPIECE</span>
+          </div>
+
+          <div class="showpiece-image-box">
+            <!-- User's authentic necklace photo -->
+            <img src="/assets/bridal-necklace.png" alt="Swarna Jewellers Royal Bridal Gold & Pearl Necklace with Rubies and Emeralds" class="showpiece-img" id="hero-necklace-img">
+
+            <!-- Interactive Gemological Hotspots -->
+            <div class="hotspot hotspot-ruby" style="top: 28%; left: 23%;" data-tooltip="Natural Burmese Ruby: Hand-cut cabochon ruby with deep royal red hue, bezel set in pure gold.">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-dot">1</span>
+            </div>
+
+            <div class="hotspot hotspot-pearl" style="top: 38%; left: 52%;" data-tooltip="South Sea Lustrous Pearls: Triple strand hand-woven luminous pearls selected for perfect luster.">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-dot">2</span>
+            </div>
+
+            <div class="hotspot hotspot-pendant" style="top: 70%; left: 63%;" data-tooltip="Grand Floral Filigree Medallion: 22K BIS 916 hallmark gold with intricate openwork setting.">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-dot">3</span>
+            </div>
+
+            <div class="hotspot hotspot-emerald" style="top: 86%; left: 65%;" data-tooltip="Zambian Emerald Drops: Natural faceted teardrop emeralds with deep vivid green tones.">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-dot">4</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Hotspot Info Box -->
+          <div class="hotspot-detail-toast" id="hotspot-toast">
+            <div class="toast-header">
+              <i data-lucide="sparkle" class="icon-sm text-gold"></i>
+              <span id="toast-title">Interactive Artisan Inspection</span>
+            </div>
+            <p id="toast-desc">Hover over any numbered golden gem above to inspect the craftsmanship.</p>
+          </div>
+
+          <!-- Quick Action Bar -->
+          <div class="showpiece-footer">
+            <div class="spec-col">
+              <span class="spec-title">Purity Certified</span>
+              <span class="spec-value">22 Karat (91.6%)</span>
+            </div>
+            <div class="spec-col text-right">
+              <a href="https://wa.me/918801535666?text=Hello%20Swarna%20Jewellers,%20I%20am%20interested%20in%20the%20Bridal%20Pearl%20and%20Ruby%20Floral%20Necklace%20shown%20on%20your%20website%20hero." target="_blank" class="btn-royal-enquire">
+                <span>Enquire Set</span>
+                <i data-lucide="message-circle" class="icon-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       LIVE BULLION RATES: CONTINUOUS HORIZONTAL SCROLLING MARQUEE
+       ======================================================== -->
+  <section class="royal-bullion-marquee" aria-label="Live Bullion Market Rates">
+    <div class="marquee-live-badge">
+      <span class="live-pulse-dot"></span>
+      <span class="badge-text">LIVE RATES</span>
+      <span class="badge-location">VIZAG</span>
+    </div>
+    
+    <div class="marquee-scroller-wrap" data-open-calc title="Click anywhere to open Instant Rate Estimator">
+      <div class="marquee-content-track">
+        <!-- Group 1 -->
+        <div class="marquee-items-group">
+          <span class="marquee-item"><strong class="metal-tag">22K Gold (916 BIS):</strong> <span class="metal-rate">₹7,850/g</span> <span class="metal-trend up">▲ ₹25</span></span>
+          <span class="marquee-gem">◆</span>
+          <span class="marquee-item"><strong class="metal-tag">24K Pure Gold (999):</strong> <span class="metal-rate">₹8,565/g</span> <span class="metal-trend up">▲ ₹30</span></span>
+          <span class="marquee-gem">◆</span>
+          <span class="marquee-item"><strong class="metal-tag">18K Diamond Gold:</strong> <span class="metal-rate">₹6,425/g</span> <span class="metal-trend up">▲ ₹20</span></span>
+          <span class="marquee-gem">◆</span>
+          <span class="marquee-item"><strong class="metal-tag">Pure Fine Silver:</strong> <span class="metal-rate">₹105/g</span> <span class="metal-trend up">▲ ₹1</span></span>
+          <span class="marquee-gem">◆</span>
+          <span class="marquee-item highlight-item"><i data-lucide="shield-check" class="icon-xs text-gold"></i> 100% BIS Hallmarked • Laser HUID Verified</span>
+          <span class="marquee-gem">◆</span>
+          <span class="marquee-item cta-item"><i data-lucide="calculator" class="icon-xs text-gold"></i> Instant Rate & Making Charges Calculator →</span>
+          <span class="marquee-gem">◆</span>
+        </div>
+        <!-- Group 2 (Exact Duplicate for Infinite Loop) -->
+        <div class="marquee-items-group" aria-hidden="true">
+          <span class="marquee-item"><strong class="metal-tag">22K Gold (916 BIS):</strong> <span class="metal-rate">₹7,850/g</span> <span class="metal-trend up">▲ ₹25</span></span>
+          <span class="marquee-gem">◆</span>
+          <span class="marquee-item"><strong class="metal-tag">24K Pure Gold (999):</strong> <span class="metal-rate">₹8,565/g</span> <span class="metal-trend up">▲ ₹30</span></span>
+          <span class="marquee-gem">◆</span>
+          <span class="marquee-item"><strong class="metal-tag">18K Diamond Gold:</strong> <span class="metal-rate">₹6,425/g</span> <span class="metal-trend up">▲ ₹20</span></span>
+          <span class="marquee-gem">◆</span>
+          <span class="marquee-item"><strong class="metal-tag">Pure Fine Silver:</strong> <span class="metal-rate">₹105/g</span> <span class="metal-trend up">▲ ₹1</span></span>
+          <span class="marquee-gem">◆</span>
+          <span class="marquee-item highlight-item"><i data-lucide="shield-check" class="icon-xs text-gold"></i> 100% BIS Hallmarked • Laser HUID Verified</span>
+          <span class="marquee-gem">◆</span>
+          <span class="marquee-item cta-item"><i data-lucide="calculator" class="icon-xs text-gold"></i> Instant Rate & Making Charges Calculator →</span>
+          <span class="marquee-gem">◆</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee-action">
+      <button class="btn-marquee-calc" data-open-calc title="Calculate jewellery price with making charges">
+        <i data-lucide="calculator" class="icon-xs"></i>
+        <span>Estimator</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SIGNATURE COLLECTIONS SHOWCASE (ROYAL GALLERY)
+       ======================================================== -->
+  <section class="section-collections" id="collections">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-heading-box text-center">
+        <span class="royal-sub-badge">ROYAL HEIRLOOMS & ORNAMENTS</span>
+        <h2 class="section-title">Our Signature Collections</h2>
+        <div class="royal-flourish">◆ ◆ ◆</div>
+        <p class="section-subtitle">
+          Handpicked 22K gold & diamond masterpieces forged by premier karigars. Each jewel embodies timeless nobility and immaculate purity.
+        </p>
+      </div>
+
+      <!-- Collection Category Filters -->
+      <div class="category-tabs" id="collection-tabs">
+        <button class="tab-btn active" data-category="all">All Masterpieces</button>
+        <button class="tab-btn" data-category="bridal">Bridal Jewellery</button>
+        <button class="tab-btn" data-category="necklaces">Gold Necklaces</button>
+        <button class="tab-btn" data-category="earrings">Designer Earrings</button>
+        <button class="tab-btn" data-category="bangles">Traditional Bangles</button>
+        <button class="tab-btn" data-category="rings">Solitaire & Rings</button>
+        <button class="tab-btn" data-category="bracelets">Royal Bracelets</button>
+      </div>
+
+      <!-- Collections Grid -->
+      <div class="collections-grid" id="collections-grid">
+        
+        <!-- Item 1: Royal Bridal Masterpiece (User's authentic photo) -->
+        <div class="jewel-card" data-category="bridal">
+          <div class="jewel-media">
+            <span class="purity-badge">22K BIS 916</span>
+            <span class="signature-tag">Heirloom</span>
+            <img src="/assets/bridal-necklace.png" alt="Royal Pearl & Ruby Bridal Choker Set" class="jewel-img">
+            <div class="jewel-overlay">
+              <button class="btn-quick-view" data-item="1">
+                <i data-lucide="eye" class="icon-sm"></i> Quick View
+              </button>
+            </div>
+          </div>
+          <div class="jewel-info">
+            <div class="jewel-category">Bridal Masterpiece</div>
+            <h3 class="jewel-title">The Maharani Royal Pearl Choker</h3>
+            <div class="jewel-meta">
+              <button class="btn-card-quick" data-item="1">
+                <i data-lucide="sparkle" class="icon-xs"></i> View Details
+              </button>
+              <a href="https://wa.me/918801535666?text=Namaste%20Swarna%20Jewellers,%20I%20would%20like%20to%20know%20details%20for%20The%20Maharani%20Royal%20Pearl%20Choker%20Set." target="_blank" class="jewel-enquire-link" title="Enquire on WhatsApp">
+                <i data-lucide="message-circle" class="icon-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Gold Necklaces -->
+        <div class="jewel-card" data-category="necklaces">
+          <div class="jewel-media">
+            <span class="purity-badge">22K 916 GOLD</span>
+            <img src="/assets/products/cat-necklaces.png" alt="Imperial 22K Gold Haram & Choker" class="jewel-img">
+            <div class="jewel-overlay">
+              <button class="btn-quick-view" data-item="2">
+                <i data-lucide="eye" class="icon-sm"></i> Quick View
+              </button>
+            </div>
+          </div>
+          <div class="jewel-info">
+            <div class="jewel-category">Gold Necklaces</div>
+            <h3 class="jewel-title">Imperial Temple Gold Haram</h3>
+            <div class="jewel-meta">
+              <button class="btn-card-quick" data-item="2">
+                <i data-lucide="sparkle" class="icon-xs"></i> View Details
+              </button>
+              <a href="https://wa.me/918801535666?text=Namaste%20Swarna%20Jewellers,%20I%20am%20interested%20in%20the%20Imperial%20Temple%20Gold%20Haram." target="_blank" class="jewel-enquire-link" title="Enquire on WhatsApp">
+                <i data-lucide="message-circle" class="icon-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Designer Earrings -->
+        <div class="jewel-card" data-category="earrings">
+          <div class="jewel-media">
+            <span class="purity-badge">22K 916 GOLD</span>
+            <img src="/assets/products/cat-earrings.png" alt="Royal Chandbali & Jhumka Drops" class="jewel-img">
+            <div class="jewel-overlay">
+              <button class="btn-quick-view" data-item="3">
+                <i data-lucide="eye" class="icon-sm"></i> Quick View
+              </button>
+            </div>
+          </div>
+          <div class="jewel-info">
+            <div class="jewel-category">Designer Earrings</div>
+            <h3 class="jewel-title">Royal Chandbali & Jhumka Drops</h3>
+            <div class="jewel-meta">
+              <button class="btn-card-quick" data-item="3">
+                <i data-lucide="sparkle" class="icon-xs"></i> View Details
+              </button>
+              <a href="https://wa.me/918801535666?text=Namaste%20Swarna%20Jewellers,%20I%20am%20interested%20in%20the%20Royal%20Chandbali%20Earrings." target="_blank" class="jewel-enquire-link" title="Enquire on WhatsApp">
+                <i data-lucide="message-circle" class="icon-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Traditional Bangles -->
+        <div class="jewel-card" data-category="bangles">
+          <div class="jewel-media">
+            <span class="purity-badge">22K 916 GOLD</span>
+            <img src="/assets/products/cat-bangles.png" alt="Heritage Royal Gold Kadas & Bangles" class="jewel-img">
+            <div class="jewel-overlay">
+              <button class="btn-quick-view" data-item="4">
+                <i data-lucide="eye" class="icon-sm"></i> Quick View
+              </button>
+            </div>
+          </div>
+          <div class="jewel-info">
+            <div class="jewel-category">Traditional Bangles</div>
+            <h3 class="jewel-title">Heritage Filigree Gold Kadas</h3>
+            <div class="jewel-meta">
+              <button class="btn-card-quick" data-item="4">
+                <i data-lucide="sparkle" class="icon-xs"></i> View Details
+              </button>
+              <a href="https://wa.me/918801535666?text=Namaste%20Swarna%20Jewellers,%20I%20am%20interested%20in%20the%20Heritage%20Gold%20Kadas." target="_blank" class="jewel-enquire-link" title="Enquire on WhatsApp">
+                <i data-lucide="message-circle" class="icon-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Solitaire & Rings -->
+        <div class="jewel-card" data-category="rings">
+          <div class="jewel-media">
+            <span class="purity-badge">CERTIFIED DIAMOND</span>
+            <img src="/assets/products/cat-rings.png" alt="Celebration Diamond & Royal Gold Rings" class="jewel-img">
+            <div class="jewel-overlay">
+              <button class="btn-quick-view" data-item="5">
+                <i data-lucide="eye" class="icon-sm"></i> Quick View
+              </button>
+            </div>
+          </div>
+          <div class="jewel-info">
+            <div class="jewel-category">Rings & Solitaires</div>
+            <h3 class="jewel-title">Celebration Solitaire Bands</h3>
+            <div class="jewel-meta">
+              <button class="btn-card-quick" data-item="5">
+                <i data-lucide="sparkle" class="icon-xs"></i> View Details
+              </button>
+              <a href="https://wa.me/918801535666?text=Namaste%20Swarna%20Jewellers,%20I%20am%20interested%20in%20the%20Solitaire%20Rings." target="_blank" class="jewel-enquire-link" title="Enquire on WhatsApp">
+                <i data-lucide="message-circle" class="icon-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Royal Bracelets -->
+        <div class="jewel-card" data-category="bracelets">
+          <div class="jewel-media">
+            <span class="purity-badge">22K 916 GOLD</span>
+            <img src="/assets/products/cat-bracelets.png" alt="Imperial Sovereign Gold Bracelets" class="jewel-img">
+            <div class="jewel-overlay">
+              <button class="btn-quick-view" data-item="6">
+                <i data-lucide="eye" class="icon-sm"></i> Quick View
+              </button>
+            </div>
+          </div>
+          <div class="jewel-info">
+            <div class="jewel-category">Royal Bracelets</div>
+            <h3 class="jewel-title">Imperial Sovereign Bracelets</h3>
+            <div class="jewel-meta">
+              <button class="btn-card-quick" data-item="6">
+                <i data-lucide="sparkle" class="icon-xs"></i> View Details
+              </button>
+              <a href="https://wa.me/918801535666?text=Namaste%20Swarna%20Jewellers,%20I%20am%20interested%20in%20the%20Imperial%20Gold%20Bracelets." target="_blank" class="jewel-enquire-link" title="Enquire on WhatsApp">
+                <i data-lucide="message-circle" class="icon-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Collections CTA -->
+      <div class="collections-bottom-cta">
+        <div class="custom-bespoke-banner">
+          <div class="banner-text">
+            <h3 class="banner-title">Have a Custom Royal Design in Mind?</h3>
+            <p class="banner-desc">Our master karigars bring your dream bridal sketches or ancestral heirloom remakes to life with exact hallmarked purity.</p>
+          </div>
+          <a href="https://wa.me/918801535666?text=Namaste%20Swarna%20Jewellers,%20I%20have%20a%20custom%20jewellery%20design%20I%20would%20like%20to%20craft." target="_blank" class="btn-royal-primary">
+            <span>Commission Custom Piece</span>
+            <i data-lucide="sparkles" class="icon-sm"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       THE 4 PILLARS OF SWARNA JEWELLERS (PURITY PROMISE)
+       ======================================================== -->
+  <section class="section-hallmarks" id="hallmarks">
+    <div class="container">
+      <div class="section-heading-box text-center">
+        <span class="royal-sub-badge">UNCOMPROMISING REPUTATION</span>
+        <h2 class="section-title">The 4 Hallmarks of Swarna Jewellers</h2>
+        <div class="royal-flourish">◆ ◆ ◆</div>
+        <p class="section-subtitle">
+          Minimal words. Maximum authenticity. Built on the bedrock of complete purity and multi-generational trust.
+        </p>
+      </div>
+
+      <div class="hallmarks-grid">
+        
+        <!-- Pillar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-top-row">
+            <div class="pillar-icon-box">
+              <i data-lucide="award" class="pillar-icon"></i>
+            </div>
+            <span class="pillar-number">01</span>
+          </div>
+          <h3 class="pillar-title">100% BIS 916 Hallmark</h3>
+          <p class="pillar-desc">
+            Govt HUID laser certified 22K pure gold. Verifiable on the BIS Care app.
+          </p>
+          <div class="pillar-feature"><i data-lucide="check" class="icon-xs"></i> Free Karatometer Test</div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card">
+          <div class="pillar-top-row">
+            <div class="pillar-icon-box">
+              <i data-lucide="gem" class="pillar-icon"></i>
+            </div>
+            <span class="pillar-number">02</span>
+          </div>
+          <h3 class="pillar-title">Certified Diamonds</h3>
+          <p class="pillar-desc">
+            Natural conflict-free solitaires with official IGI & GIA grading cards.
+          </p>
+          <div class="pillar-feature"><i data-lucide="check" class="icon-xs"></i> Authenticity Certified</div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card">
+          <div class="pillar-top-row">
+            <div class="pillar-icon-box">
+              <i data-lucide="scale" class="pillar-icon"></i>
+            </div>
+            <span class="pillar-number">03</span>
+          </div>
+          <h3 class="pillar-title">Price Transparency</h3>
+          <p class="pillar-desc">
+            Itemized billing with exact net weight, live gold rate, and zero hidden charges.
+          </p>
+          <div class="pillar-feature"><i data-lucide="check" class="icon-xs"></i> 100% Exact Net Weight</div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card">
+          <div class="pillar-top-row">
+            <div class="pillar-icon-box">
+              <i data-lucide="repeat" class="pillar-icon"></i>
+            </div>
+            <span class="pillar-number">04</span>
+          </div>
+          <h3 class="pillar-title">Lifetime Care & Exchange</h3>
+          <p class="pillar-desc">
+            Complimentary ultrasonic cleaning, stone tightening, and guaranteed buyback.
+          </p>
+          <div class="pillar-feature"><i data-lucide="check" class="icon-xs"></i> Lifetime Buyback Guarantee</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FLAGSHIP SHOWROOM & HERITAGE (FEATURING REAL PHOTOS)
+       ======================================================== -->
+  <section class="section-showroom" id="showroom">
+    <div class="container">
+      <div class="showroom-wrapper">
+        
+        <!-- Left: Real Showroom Photos Gallery -->
+        <div class="showroom-media-col">
+          <div class="showroom-gallery-grid">
+            <!-- Exterior Storefront Photo -->
+            <div class="gallery-photo-card card-storefront">
+              <img src="/assets/storefront.png" alt="Swarna Jewellers Gopalapatnam Flagship Storefront Facade" class="gallery-img">
+              <div class="photo-caption">
+                <span class="caption-title">The Grand Facade</span>
+                <span class="caption-sub">6-77, Main Rd, Gopalapatnam</span>
+              </div>
+            </div>
+
+            <!-- Interior Showroom Photo -->
+            <div class="gallery-photo-card card-interior">
+              <img src="/assets/showroom.png" alt="Swarna Jewellers Luxury Showroom Interior and Ring Display Suites" class="gallery-img">
+              <div class="photo-caption">
+                <span class="caption-title">Private Viewing Suites</span>
+                <span class="caption-sub">Handcrafted Wooden Lounges</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Story & Experience -->
+        <div class="showroom-content-col">
+          <span class="royal-sub-badge">FLAGSHIP DESTINATION</span>
+          <h2 class="section-title">Experience Royal Hospitality at Gopalapatnam</h2>
+          <div class="royal-flourish">◆ ◆ ◆</div>
+          
+          <p class="showroom-lead">
+            Step through our doors and enter an ambiance curated for royalty. Whether selecting bridal ornaments for your once-in-a-lifetime wedding or finding a daily gold treasure, our warm consultants guide you with patience and honesty.
+          </p>
+
+          <div class="showroom-amenities">
+            <div class="amenity-item">
+              <div class="amenity-icon"><i data-lucide="sparkles" class="icon-sm"></i></div>
+              <div>
+                <h4>Private VIP Bridal Lounges</h4>
+                <p>Comfortable, unhurried space for brides and families to drape full sets.</p>
+              </div>
+            </div>
+
+            <div class="amenity-item">
+              <div class="amenity-icon"><i data-lucide="shield-check" class="icon-sm"></i></div>
+              <div>
+                <h4>Instant Karatometer Testing</h4>
+                <p>Witness live computerized XRF purity testing for any gold you bring.</p>
+              </div>
+            </div>
+
+            <div class="amenity-item">
+              <div class="amenity-icon"><i data-lucide="heart-handshake" class="icon-sm"></i></div>
+              <div>
+                <h4>Dedicated Personal Concierge</h4>
+                <p>One-on-one consultation with master goldsmiths for custom heirlooms.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="showroom-action-row">
+            <a href="https://wa.me/918801535666?text=Hello%20Swarna%20Jewellers,%20I%20would%20like%20to%20schedule%20a%20showroom%20visit%20in%20Gopalapatnam." target="_blank" class="btn-royal-primary">
+              <span>Book In-Store VIP Appointment</span>
+              <i data-lucide="calendar" class="icon-sm"></i>
+            </a>
+            <a href="#contact" class="btn-royal-glass">
+              <span>Get Directions</span>
+              <i data-lucide="map-pin" class="icon-sm text-gold"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       PATRON PRAISES & TESTIMONIALS (GENUINE REVIEWS)
+       ======================================================== -->
+  <section class="section-testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-heading-box text-center">
+        <span class="royal-sub-badge">VOICES OF TRUST</span>
+        <h2 class="section-title">What Our Patrons Say</h2>
+        <div class="royal-flourish">◆ ◆ ◆</div>
+        <p class="section-subtitle">
+          From bridal blessings to precious gifts, hear from families across Andhra Pradesh who celebrate life with Swarna Jewellers.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-stars">
+            ★★★★★
+          </div>
+          <p class="review-quote">
+            "The craftsmanship is simply outstanding. I purchased my bridal necklace set from Swarna Jewellers, and everyone admired its elegance. The quality and purity exceeded all our expectations."
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">PR</div>
+            <div>
+              <h4 class="reviewer-name">Priya Reddy</h4>
+              <span class="reviewer-city">Rajahmundry</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card featured-review">
+          <div class="review-stars">
+            ★★★★★
+          </div>
+          <p class="review-quote">
+            "From classic gold jewellery to modern designs, every collection is breathtaking. The staff guided us patiently with complete pricing clarity, making our wedding shopping unforgettable."
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">AS</div>
+            <div>
+              <h4 class="reviewer-name">Ananya Sharma</h4>
+              <span class="reviewer-city">Kakinada</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-stars">
+            ★★★★★
+          </div>
+          <p class="review-quote">
+            "I bought a gold gift for my mother, and she absolutely loved it. Genuine certified 916 quality, attractive designs, and transparent billing. Highly recommended to everyone!"
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">SK</div>
+            <div>
+              <h4 class="reviewer-name">Suresh Kumar</h4>
+              <span class="reviewer-city">Visakhapatnam</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       VIP APPOINTMENT & BESPOKE INQUIRY FORM
+       ======================================================== -->
+  <section class="section-appointment" id="appointment">
+    <div class="container">
+      <div class="appointment-box">
+        <div class="appointment-grid">
+          
+          <div class="appointment-info-col">
+            <span class="royal-sub-badge">EXCLUSIVE CONSULTATION</span>
+            <h2 class="appointment-heading">Reserve Your Private Royal Viewing</h2>
+            <p class="appointment-desc">
+              Enjoy uninterrupted access to our bridal vaults and private consultation with our head jewelry specialists. Complimentary refreshments and personalized styling.
+            </p>
+            <div class="appointment-contact-perks">
+              <div class="perk"><i data-lucide="phone" class="icon-sm text-gold"></i> Direct Line: +91 88015 35666</div>
+              <div class="perk"><i data-lucide="mail" class="icon-sm text-gold"></i> swarnajewellers8@gmail.com</div>
+              <div class="perk"><i data-lucide="clock" class="icon-sm text-gold"></i> Open Daily: 10:00 AM – 9:00 PM</div>
+            </div>
+          </div>
+
+          <div class="appointment-form-col">
+            <form id="appointment-form" class="royal-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="app-name">Your Full Name</label>
+                  <input type="text" id="app-name" required placeholder="e.g. Lakshmi Devi">
+                </div>
+                <div class="form-group">
+                  <label for="app-phone">Mobile Number</label>
+                  <input type="tel" id="app-phone" required placeholder="e.g. 98765 43210">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="app-category">Interest Area</label>
+                  <select id="app-category">
+                    <option value="Bridal Jewellery Set">Bridal Jewellery Set</option>
+                    <option value="Gold Haram & Necklaces">Gold Haram & Necklaces</option>
+                    <option value="Traditional Bangles & Kadas">Traditional Bangles & Kadas</option>
+                    <option value="Diamond Solitaires & Rings">Diamond Solitaires & Rings</option>
+                    <option value="Bespoke Custom Commission">Bespoke Custom Commission</option>
+                    <option value="Gold Scheme / Savings Plan">Gold Scheme / Savings Plan</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="app-date">Preferred Date</label>
+                  <input type="date" id="app-date" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="app-notes">Special Requests / Notes (Optional)</label>
+                <textarea id="app-notes" rows="2" placeholder="Mention preferred weights, karat, or family wedding dates..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-royal-primary full-width">
+                <span>Confirm VIP Appointment via WhatsApp</span>
+                <i data-lucide="arrow-right" class="icon-sm"></i>
+              </button>
+              <div id="form-feedback" class="form-feedback"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       LOCATION & SHOWROOM VISIT (MAP & HOURS)
+       ======================================================== -->
+  <section class="section-contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Details -->
+        <div class="contact-card">
+          <span class="royal-sub-badge">FLAGSHIP BOUTIQUE</span>
+          <h2 class="contact-heading">Visit Swarna Jewellers</h2>
+          <div class="royal-flourish">◆ ◆ ◆</div>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="map-pin" class="icon-md"></i></div>
+              <div>
+                <strong>Showroom Address</strong>
+                <p>6-77, Main Rd, Gopalapatnam,<br>Visakhapatnam, Andhra Pradesh 530027</p>
+                <a href="https://maps.google.com/?q=6-77,+Main+Rd,+Gopalapatnam,+Visakhapatnam+530027" target="_blank" rel="noopener noreferrer" class="link-directions">
+                  Open in Google Maps <i data-lucide="external-link" class="icon-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="phone-call" class="icon-md"></i></div>
+              <div>
+                <strong>Customer Assistance & Enquiries</strong>
+                <p><a href="tel:8801535666" class="phone-link">88015 35666</a></p>
+                <p class="contact-sub">Available Mon – Sun: 10:00 AM – 9:00 PM</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="mail" class="icon-md"></i></div>
+              <div>
+                <strong>Official Email</strong>
+                <p><a href="mailto:swarnajewellers8@gmail.com" class="phone-link">swarnajewellers8@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-cta-btns">
+            <a href="https://wa.me/918801535666?text=Namaste%20Swarna%20Jewellers,%20I%20am%20planning%20to%20visit%20your%20showroom." target="_blank" class="btn-royal-primary">
+              <i data-lucide="message-circle" class="icon-sm"></i> WhatsApp Us
+            </a>
+            <a href="tel:8801535666" class="btn-royal-outline">
+              <i data-lucide="phone" class="icon-sm"></i> Direct Call
+            </a>
+          </div>
+        </div>
+
+        <!-- Embedded Interactive Map -->
+        <div class="map-card">
+          <iframe 
+            title="Swarna Jewellers Gopalapatnam Location Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15197.876127393282!2d83.197943!3d17.766155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39678e88888889%3A0x123456789!2sGopalapatnam%2C%20Visakhapatnam%2C%20Andhra%20Pradesh%20530027!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="map-badge-overlay">
+            <i data-lucide="map-pin" class="icon-sm text-gold"></i>
+            <span>Main Road, Gopalapatnam Landmark</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       ROYAL FOOTER
+       ======================================================== -->
+  <footer class="royal-footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <img src="/assets/icon-transparent.png" alt="Swarna Jewellers Logo" class="footer-icon">
+            <div class="brand-titles">
+              <span class="brand-name">SWARNA</span>
+              <span class="brand-subtitle">JEWELLERS</span>
+            </div>
+          </div>
+          <p class="footer-about">
+            A celebrated tradition of pure gold, immaculate diamonds, and royal Andhra craftsmanship. Trusted by generations of families for wedding auspiciousness and heritage heirloom jewellery.
+          </p>
+          <div class="hallmark-logos-row">
+            <span class="hallmark-tag">BIS 916 Certified</span>
+            <span class="hallmark-tag">HUID Laser Tagged</span>
+            <span class="hallmark-tag">100% Genuine Hallmarked</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Royal Collections</h4>
+          <ul class="footer-links">
+            <li><a href="#collections">Bridal Masterpieces</a></li>
+            <li><a href="#collections">22K Gold Necklaces & Harams</a></li>
+            <li><a href="#collections">Antique Temple Bangles & Kadas</a></li>
+            <li><a href="#collections">Designer Jhumkas & Chandbalis</a></li>
+            <li><a href="#collections">Certified Diamond Solitaires</a></li>
+            <li><a href="#collections">Everyday Luxury Ornaments</a></li>
+          </ul>
+        </div>
+
+        <!-- Trust & Policies -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Purity & Assurance</h4>
+          <ul class="footer-links">
+            <li><a href="#hallmarks">BIS 916 Hallmark Standard</a></li>
+            <li><a href="javascript:void(0)" data-open-calc>Daily Bullion & Rate Calculator</a></li>
+            <li><a href="#hallmarks">Lifetime Maintenance Guarantee</a></li>
+            <li><a href="#hallmarks">Transparent Weight & Exchange</a></li>
+            <li><a href="#appointment">Private Bridal Consultation</a></li>
+            <li><a href="#showroom">Flagship Showroom Tour</a></li>
+          </ul>
+        </div>
+
+        <!-- Store Timings & Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Flagship Location</h4>
+          <p class="footer-address">
+            6-77, Main Rd, Gopalapatnam,<br>
+            Visakhapatnam, AP 530027
+          </p>
+          <p class="footer-phone">
+            <strong>Hotline:</strong> <a href="tel:8801535666">88015 35666</a>
+          </p>
+          <p class="footer-email">
+            <strong>Email:</strong> <a href="mailto:swarnajewellers8@gmail.com">swarnajewellers8@gmail.com</a>
+          </p>
+          <p class="footer-hours">
+            <strong>Store Hours:</strong> Mon – Sun | 10:00 AM – 9:00 PM
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 Swarna Jewellers. All Rights Reserved. Crafted with Royal Pride for Visakhapatnam.
+        </div>
+        <div class="footer-bottom-links">
+          <span>BIS 916 Hallmarked</span>
+          <span>•</span>
+          <span>100% Certified Diamonds</span>
+          <span>•</span>
+          <a href="#home" class="back-to-top">Back To Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       FLOATING CONCIERGE BUTTONS (WHATSAPP & CALL)
+       ======================================================== -->
+  <div class="floating-concierge">
+    <a href="https://wa.me/918801535666?text=Namaste%20Swarna%20Jewellers,%20I%20am%20browsing%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20jewellery." target="_blank" rel="noopener noreferrer" class="concierge-btn whatsapp-btn" title="Chat on WhatsApp with Royal Concierge">
+      <i data-lucide="message-circle" class="icon-md"></i>
+      <span class="concierge-tooltip">WhatsApp Concierge</span>
+      <span class="ping-wave"></span>
+    </a>
+    <a href="tel:8801535666" class="concierge-btn call-btn" title="Call Swarna Jewellers Directly">
+      <i data-lucide="phone" class="icon-md"></i>
+      <span class="concierge-tooltip">Call 88015 35666</span>
+    </a>
+  </div>
+
+  <!-- ========================================================
+       MODAL: QUICK VIEW / JEWEL DETAIL
+       ======================================================== -->
+  <div id="quick-view-modal" class="royal-modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" id="modal-close-btn">&times;</button>
+      <div class="modal-body" id="modal-content">
+        <!-- Dynamically injected in JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL: THE ROYAL RATE ESTIMATOR & VALUE CALCULATOR
+       ======================================================== -->
+  <div id="calculator-modal" class="royal-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="calc-modal-backdrop"></div>
+    <div class="modal-dialog modal-calc-dialog">
+      <button class="modal-close" id="calc-modal-close-btn">&times;</button>
+      <div class="modal-body">
+        <div class="calc-modal-header text-center">
+          <span class="royal-sub-badge">TRANSPARENCY IN EVERY GRAM</span>
+          <h2 class="section-title">The Royal Karat & Value Calculator</h2>
+          <div class="royal-flourish">◆ ◆ ◆</div>
+          <p class="section-subtitle">
+            Estimate your custom jewellery valuation based on today's certified live bullion rates.
+          </p>
+        </div>
+
+        <div class="calc-luxury-card modal-calc-card">
+          <div class="calc-grid">
+            
+            <!-- Controls Column -->
+            <div class="calc-controls">
+              <!-- Metal / Purity Selector -->
+              <div class="calc-group">
+                <label class="calc-label">Select Metal & Karat</label>
+                <div class="calc-pill-group" id="purity-selector">
+                  <button type="button" class="pill-btn active" data-rate="7850" data-karat="22K (916 Hallmarked)">
+                    <span class="pill-title">22K Gold</span>
+                    <span class="pill-sub">BIS 916 Standard</span>
+                  </button>
+                  <button type="button" class="pill-btn" data-rate="8565" data-karat="24K (999 Pure Bullion)">
+                    <span class="pill-title">24K Gold</span>
+                    <span class="pill-sub">99.9% Pure</span>
+                  </button>
+                  <button type="button" class="pill-btn" data-rate="6420" data-karat="18K (Diamond Studded)">
+                    <span class="pill-title">18K Gold</span>
+                    <span class="pill-sub">Diamond Setting</span>
+                  </button>
+                  <button type="button" class="pill-btn" data-rate="105" data-karat="Fine Silver (92.5)">
+                    <span class="pill-title">Fine Silver</span>
+                    <span class="pill-sub">92.5 Sterling</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Weight Slider & Manual Input -->
+              <div class="calc-group">
+                <div class="calc-label-row">
+                  <label class="calc-label" for="weight-range">Gold Weight (in Grams)</label>
+                  <div class="weight-input-box">
+                    <input type="number" id="weight-input" min="0.5" max="250" step="0.5" value="25">
+                    <span class="unit">Grams</span>
+                  </div>
+                </div>
+                <input type="range" id="weight-range" min="1" max="100" step="0.5" value="25" class="luxury-range">
+                <div class="range-presets">
+                  <button type="button" class="preset-btn" data-val="8">8g (1 Sovereign)</button>
+                  <button type="button" class="preset-btn" data-val="16">16g</button>
+                  <button type="button" class="preset-btn" data-val="25">25g</button>
+                  <button type="button" class="preset-btn" data-val="50">50g</button>
+                  <button type="button" class="preset-btn" data-val="100">100g</button>
+                </div>
+              </div>
+
+              <!-- Making & Wastage Selection (Transparent) -->
+              <div class="calc-group">
+                <label class="calc-label">Artisan Making & Craftsmanship Tier</label>
+                <select id="making-tier" class="luxury-select">
+                  <option value="8">Classic Plain Gold Ornaments (~8% to 10%)</option>
+                  <option value="12" selected>Intricate Bridal & Antique Temple Work (~12% to 14%)</option>
+                  <option value="16">Royal Filigree & Kundan Handcrafted (~16% to 18%)</option>
+                  <option value="0">Pure Gold Coins / Bullion Bars (0% Making)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Valuation Breakdown Output Column -->
+            <div class="calc-summary">
+              <div class="summary-card-inner">
+                <div class="summary-top">
+                  <span class="summary-badge">CERTIFIED ESTIMATE</span>
+                  <span id="selected-karat-label" class="summary-karat">22K Gold (BIS 916)</span>
+                </div>
+
+                <div class="summary-rows">
+                  <div class="summary-row">
+                    <span class="row-label">Base Metal Price (<span id="calc-rate-display">₹7,850</span> / gm)</span>
+                    <span class="row-val" id="val-base">₹1,96,250</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="row-label">Artisan Making Charges (<span id="calc-making-display">12%</span>)</span>
+                    <span class="row-val" id="val-making">₹23,550</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="row-label">Applicable GST (3%)</span>
+                    <span class="row-val" id="val-gst">₹6,594</span>
+                  </div>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total-box">
+                  <span class="total-title">Total Estimated Investment</span>
+                  <span class="total-amount gold-text-gradient" id="val-total">₹2,26,394</span>
+                  <span class="total-disclaimer">*Actual price varies slightly based on exact stone weight and daily live bullion market fixing.</span>
+                </div>
+
+                <div class="summary-actions">
+                  <a href="#" id="calc-whatsapp-btn" class="btn-royal-primary full-width" target="_blank">
+                    <i data-lucide="message-circle" class="icon-sm"></i>
+                    <span>Lock Rate / Enquire This Weight</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

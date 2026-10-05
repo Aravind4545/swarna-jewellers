@@ -1,0 +1,10 @@
+node_modules
+dist
+.DS_Store
+*.log
+.env
+.env.local
+scratch_*.png
+tag_detailed.png
+extracted_text.txt
+extract.py
