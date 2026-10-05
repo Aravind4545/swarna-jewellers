@@ -50,7 +50,45 @@
   --radius-md: 8px;
   --radius-lg: 16px;
   --radius-pill: 9999px;
-  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================
+   BRIGHT ROYAL PALETTE (CLASSIC PEARL IVORY & RADIANT GOLD)
+   ========================================================== */
+[data-theme="bright"] {
+  /* Rich Royal Warm Gold Palette for Bright Backgrounds */
+  --gold-300: #7D550A;
+  --gold-400: #8C600E;
+  --gold-500: #A16F13;
+  --gold-600: #8B5E0D;
+  --gold-700: #704907;
+  --gold-800: #543603;
+  --gold-metallic: linear-gradient(135deg, #B88526 0%, #E2BE64 35%, #A67417 70%, #CE9F39 100%);
+  --gold-metallic-subtle: linear-gradient(135deg, rgba(184, 133, 38, 0.12) 0%, rgba(226, 190, 100, 0.22) 50%, rgba(166, 116, 23, 0.12) 100%);
+  --gold-border: rgba(161, 111, 19, 0.26);
+  --gold-border-bright: rgba(161, 111, 19, 0.7);
+  --gold-glow: 0 4px 20px rgba(161, 111, 19, 0.16);
+  --gold-glow-lg: 0 10px 30px rgba(161, 111, 19, 0.18);
+
+  /* Warm Pearl Ivory & Royal Cream Canvas */
+  --bg-deep: #F7F5EE;
+  --bg-card: #FFFFFF;
+  --bg-surface: #EDE8DC;
+  --bg-glass: rgba(247, 245, 238, 0.94);
+  --bg-glass-card: rgba(255, 255, 255, 0.94);
+
+  /* Gemstone Accents */
+  --ruby-red: #A8142C;
+  --ruby-glow: 0 4px 14px rgba(168, 20, 44, 0.3);
+  --emerald-green: #046A3E;
+  --emerald-glow: 0 4px 14px rgba(4, 106, 62, 0.3);
+
+  /* High-end Neutral Typography */
+  --text-pure: #14131A;
+  --text-ivory: #26242C;
+  --text-gold-light: #5A3E09;
+  --text-muted: #565360;
+  --text-dim: #7C7888;
 }
 
 /* ==========================================================
@@ -1085,7 +1123,7 @@ button {
 }
 
 @media (max-width: 992px) {
-  .nav-links, .nav-calc-btn, .nav-icon-btn, .navbar-actions .btn-royal-primary {
+  .nav-links, .nav-calc-btn, .nav-icon-btn:not(.theme-toggle-btn), .navbar-actions .btn-royal-primary {
     display: none !important;
   }
   .mobile-toggle {
@@ -3578,4 +3616,727 @@ button {
 .icon-xs { width: 14px; height: 14px; }
 .icon-sm { width: 16px; height: 16px; }
 .icon-md { width: 20px; height: 20px; }
+
+/* ==========================================================
+   THEME TOGGLE CONTROLLER & SWITCH STYLES
+   ========================================================== */
+.theme-toggle-btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-300);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s, border-color 0.3s, color 0.3s;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: var(--gold-400);
+  transform: rotate(20deg) scale(1.08);
+}
+
+/* Default / Dark Theme: Show Sun Icon */
+html:not([data-theme="bright"]) .theme-icon-sun,
+html[data-theme="dark"] .theme-icon-sun {
+  display: inline-block !important;
+  color: var(--gold-300);
+}
+
+html:not([data-theme="bright"]) .theme-icon-moon,
+html[data-theme="dark"] .theme-icon-moon {
+  display: none !important;
+}
+
+/* Bright Theme: Show Moon Icon */
+html[data-theme="bright"] .theme-icon-sun {
+  display: none !important;
+}
+
+html[data-theme="bright"] .theme-icon-moon {
+  display: inline-block !important;
+  color: #7D550A;
+}
+
+/* Mobile Nav Drawer Theme Switcher Row */
+.mobile-theme-item {
+  list-style: none;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.mobile-theme-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-pure);
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.25rem 0;
+}
+
+.mobile-theme-label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 600;
+  color: var(--text-pure);
+}
+
+.theme-pill-track {
+  width: 48px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--gold-border);
+  border-radius: 99px;
+  position: relative;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.theme-pill-thumb {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s;
+}
+
+/* ==========================================================
+   BRIGHT THEME COMPONENT OVERRIDES
+   ========================================================== */
+html[data-theme="bright"] {
+  background-color: #F7F5EE;
+  color: #26242C;
+}
+
+[data-theme="bright"] body.royal-body {
+  background-color: #F7F5EE;
+  color: #26242C;
+}
+
+[data-theme="bright"] body.royal-body::before {
+  background-image: 
+    radial-gradient(circle at 50% 20%, rgba(184, 133, 38, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 10% 80%, rgba(184, 133, 38, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 90% 70%, rgba(168, 20, 44, 0.03) 0%, transparent 40%);
+}
+
+/* Navbar */
+[data-theme="bright"] .royal-navbar {
+  background: rgba(247, 245, 238, 0.94);
+  border-bottom: 1px solid rgba(161, 111, 19, 0.22);
+}
+
+[data-theme="bright"] .royal-navbar.scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="bright"] .brand-title {
+  color: #14131A;
+}
+
+[data-theme="bright"] .brand-tagline {
+  color: #8C600E;
+}
+
+[data-theme="bright"] .nav-link-text {
+  color: #26242C;
+}
+
+[data-theme="bright"] .nav-link:hover .nav-link-text {
+  color: #A16F13;
+}
+
+[data-theme="bright"] .nav-calc-btn {
+  background: rgba(161, 111, 19, 0.09);
+  border-color: rgba(161, 111, 19, 0.3);
+  color: #14131A;
+}
+
+[data-theme="bright"] .nav-calc-btn:hover {
+  background: rgba(161, 111, 19, 0.18);
+  border-color: var(--gold-500);
+  color: #7D550A;
+}
+
+[data-theme="bright"] .theme-toggle-btn {
+  background: rgba(161, 111, 19, 0.1);
+  border-color: rgba(161, 111, 19, 0.3);
+  color: #7D550A;
+}
+
+[data-theme="bright"] .theme-toggle-btn:hover {
+  background: rgba(161, 111, 19, 0.2);
+  border-color: var(--gold-500);
+}
+
+[data-theme="bright"] .mobile-toggle span {
+  background: #14131A;
+}
+
+[data-theme="bright"] .mobile-nav {
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(161, 111, 19, 0.22);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="bright"] .mobile-link {
+  color: #14131A;
+  border-bottom-color: rgba(161, 111, 19, 0.15);
+}
+
+[data-theme="bright"] .mobile-theme-item {
+  border-bottom-color: rgba(161, 111, 19, 0.15);
+}
+
+[data-theme="bright"] .mobile-theme-label {
+  color: #14131A;
+}
+
+[data-theme="bright"] .theme-pill-track {
+  background: var(--gold-metallic);
+  border-color: var(--gold-500);
+}
+
+[data-theme="bright"] .theme-pill-thumb {
+  transform: translateX(20px);
+  background: #14131A;
+}
+
+/* Hero Section */
+[data-theme="bright"] .royal-hero {
+  background: radial-gradient(ellipse at 70% 30%, rgba(226, 190, 100, 0.25) 0%, #F7F5EE 70%);
+}
+
+[data-theme="bright"] .hero-bg-overlay {
+  background: linear-gradient(135deg, rgba(247, 245, 238, 0.85) 0%, rgba(247, 245, 238, 0.55) 60%, rgba(247, 245, 238, 0.92) 100%);
+}
+
+[data-theme="bright"] .hero-heading {
+  color: #14131A;
+}
+
+[data-theme="bright"] .hero-description {
+  color: #4A4652;
+}
+
+[data-theme="bright"] .hero-royal-crest-tag {
+  background: rgba(161, 111, 19, 0.09);
+  border-color: rgba(161, 111, 19, 0.3);
+  color: #7D550A;
+}
+
+[data-theme="bright"] .hero-trust-tag {
+  background: #FFFFFF;
+  border-color: rgba(161, 111, 19, 0.25);
+  color: #26242C;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="bright"] .hero-stat-card {
+  background: #FFFFFF;
+  border-color: rgba(161, 111, 19, 0.22);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="bright"] .stat-value {
+  color: #14131A;
+}
+
+[data-theme="bright"] .stat-label {
+  color: #6E4D0C;
+}
+
+[data-theme="bright"] .btn-royal-outline {
+  border-color: rgba(161, 111, 19, 0.45);
+  color: #14131A;
+  background: #FFFFFF;
+}
+
+[data-theme="bright"] .btn-royal-outline:hover {
+  background: rgba(161, 111, 19, 0.12);
+  border-color: var(--gold-500);
+}
+
+/* Bullion Rates Marquee */
+[data-theme="bright"] .royal-bullion-marquee {
+  background: linear-gradient(90deg, #EFECE2 0%, #E6E0D0 50%, #EFECE2 100%);
+  border-top: 1px solid rgba(161, 111, 19, 0.25);
+  border-bottom: 1px solid rgba(161, 111, 19, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="bright"] .ticker-badge {
+  background: #A16F13;
+  color: #FFFFFF;
+}
+
+[data-theme="bright"] .rate-karat {
+  color: #5A3E09;
+}
+
+[data-theme="bright"] .rate-val {
+  color: #14131A;
+  font-weight: 700;
+}
+
+[data-theme="bright"] .ticker-btn {
+  background: #FFFFFF;
+  border-color: rgba(161, 111, 19, 0.3);
+  color: #14131A;
+}
+
+/* Collections Section */
+[data-theme="bright"] .section-collections {
+  background: #F7F5EE;
+}
+
+[data-theme="bright"] .section-title {
+  color: #14131A;
+}
+
+[data-theme="bright"] .section-subtitle {
+  color: #565360;
+}
+
+[data-theme="bright"] .category-tab {
+  background: #FFFFFF;
+  border-color: rgba(161, 111, 19, 0.22);
+  color: #26242C;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="bright"] .category-tab:hover {
+  border-color: var(--gold-500);
+  color: var(--gold-500);
+}
+
+[data-theme="bright"] .category-tab.active {
+  background: var(--gold-metallic);
+  color: #14131A;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(161, 111, 19, 0.28);
+}
+
+[data-theme="bright"] .jewel-card {
+  background: #FFFFFF;
+  border-color: rgba(161, 111, 19, 0.22);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="bright"] .jewel-card:hover {
+  border-color: rgba(161, 111, 19, 0.6);
+  box-shadow: 0 16px 45px rgba(161, 111, 19, 0.14);
+}
+
+[data-theme="bright"] .purity-badge {
+  background: rgba(255, 255, 255, 0.94);
+  color: #7D550A;
+  border-color: rgba(161, 111, 19, 0.4);
+}
+
+[data-theme="bright"] .jewel-title {
+  color: #14131A;
+}
+
+[data-theme="bright"] .jewel-category {
+  color: #8C600E;
+}
+
+[data-theme="bright"] .jewel-meta {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+[data-theme="bright"] .btn-card-quick {
+  background: rgba(161, 111, 19, 0.08);
+  border-color: rgba(161, 111, 19, 0.25);
+  color: #14131A;
+}
+
+[data-theme="bright"] .btn-card-quick:hover {
+  background: rgba(161, 111, 19, 0.18);
+  border-color: var(--gold-500);
+  color: #7D550A;
+}
+
+[data-theme="bright"] .jewel-enquire-link {
+  background: rgba(37, 211, 102, 0.12);
+  color: #1da851;
+}
+
+/* Hallmarks Section */
+[data-theme="bright"] .section-hallmarks {
+  background: #EDE8DC;
+  border-top: 1px solid rgba(161, 111, 19, 0.2);
+  border-bottom: 1px solid rgba(161, 111, 19, 0.2);
+}
+
+[data-theme="bright"] .hallmark-item {
+  background: #FFFFFF;
+  border-color: rgba(161, 111, 19, 0.22);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="bright"] .hallmark-item:hover {
+  border-color: var(--gold-500);
+  box-shadow: 0 12px 30px rgba(161, 111, 19, 0.12);
+}
+
+[data-theme="bright"] .hallmark-icon-wrap {
+  background: rgba(161, 111, 19, 0.09);
+  color: #8C600E;
+}
+
+[data-theme="bright"] .hallmark-title {
+  color: #14131A;
+}
+
+[data-theme="bright"] .hallmark-desc {
+  color: #565360;
+}
+
+[data-theme="bright"] .hallmark-badge {
+  background: rgba(161, 111, 19, 0.1);
+  color: #7D550A;
+  border-color: rgba(161, 111, 19, 0.3);
+}
+
+/* Showroom Section */
+[data-theme="bright"] .section-showroom {
+  background: #F7F5EE;
+}
+
+[data-theme="bright"] .showroom-card {
+  background: #FFFFFF;
+  border-color: rgba(161, 111, 19, 0.25);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="bright"] .showroom-showcase-card {
+  background: #FFFFFF !important;
+  border-color: rgba(161, 111, 19, 0.25) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="bright"] .showroom-showcase-card:hover {
+  border-color: rgba(161, 111, 19, 0.6) !important;
+  box-shadow: 0 18px 45px rgba(161, 111, 19, 0.16) !important;
+}
+
+[data-theme="bright"] .showroom-amenity-card {
+  background: #FFFFFF !important;
+  background-image: none !important;
+  border: 1.5px solid rgba(161, 111, 19, 0.22) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="bright"] .showroom-amenity-card:hover {
+  border-color: var(--gold-500) !important;
+}
+
+[data-theme="bright"] .amenity-gold-icon {
+  background: rgba(161, 111, 19, 0.1) !important;
+  border-color: rgba(161, 111, 19, 0.35) !important;
+  color: #7D550A !important;
+}
+
+[data-theme="bright"] .amenity-details h4 {
+  color: #14131A !important;
+}
+
+[data-theme="bright"] .amenity-details p {
+  color: #565360 !important;
+}
+
+[data-theme="bright"] .btn-royal-glass {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1.5px solid rgba(161, 111, 19, 0.45) !important;
+  color: #14131A !important;
+}
+
+[data-theme="bright"] .btn-royal-glass:hover {
+  background: rgba(161, 111, 19, 0.12) !important;
+  border-color: var(--gold-500) !important;
+  color: #7D550A !important;
+}
+
+/* Testimonials Section */
+[data-theme="bright"] .section-testimonials {
+  background: linear-gradient(180deg, #EDE8DC 0%, #F5F2EA 50%, #EDE8DC 100%) !important;
+}
+
+[data-theme="bright"] .review-card {
+  background: #FFFFFF !important;
+  background-image: none !important;
+  border: 1.5px solid rgba(161, 111, 19, 0.22) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="bright"] .review-card:hover {
+  border-color: var(--gold-500) !important;
+  box-shadow: 0 15px 35px rgba(161, 111, 19, 0.14) !important;
+}
+
+[data-theme="bright"] .review-card.featured-review {
+  border-color: rgba(161, 111, 19, 0.5) !important;
+  box-shadow: 0 10px 35px rgba(161, 111, 19, 0.12) !important;
+}
+
+[data-theme="bright"] .review-quote {
+  color: #2D2B35 !important;
+}
+
+[data-theme="bright"] .reviewer-name {
+  color: #14131A !important;
+}
+
+[data-theme="bright"] .reviewer-city {
+  color: #7D550A !important;
+}
+
+[data-theme="bright"] .reviewer-info {
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="bright"] .reviewer-avatar {
+  background: var(--gold-metallic) !important;
+  color: #14131A !important;
+  font-weight: 700 !important;
+}
+
+/* VIP Appointment Section */
+[data-theme="bright"] .section-appointment {
+  background: #F7F5EE;
+}
+
+[data-theme="bright"] .appointment-box {
+  background: radial-gradient(circle at 10% 20%, #FFFFFF 0%, #FBF9F4 100%);
+  border-color: rgba(161, 111, 19, 0.35);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="bright"] .appointment-heading {
+  color: #14131A;
+}
+
+[data-theme="bright"] .appointment-desc {
+  color: #565360;
+}
+
+[data-theme="bright"] .appt-benefit-item strong {
+  color: #14131A;
+}
+
+[data-theme="bright"] .appt-benefit-item p {
+  color: #565360;
+}
+
+[data-theme="bright"] .form-label {
+  color: #7D550A;
+}
+
+[data-theme="bright"] .form-input,
+[data-theme="bright"] .form-select,
+[data-theme="bright"] .form-textarea {
+  background: #F7F5EE;
+  border: 1.5px solid rgba(161, 111, 19, 0.28);
+  color: #14131A;
+}
+
+[data-theme="bright"] .form-input:focus,
+[data-theme="bright"] .form-select:focus,
+[data-theme="bright"] .form-textarea:focus {
+  background: #FFFFFF;
+  border-color: var(--gold-500);
+  box-shadow: 0 0 12px rgba(161, 111, 19, 0.2);
+}
+
+/* Contact Section */
+[data-theme="bright"] .section-contact {
+  background: #EDE8DC;
+}
+
+[data-theme="bright"] .contact-card {
+  background: radial-gradient(circle at 10% 20%, #FFFFFF 0%, #FBF9F4 100%);
+  border-color: rgba(161, 111, 19, 0.35);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="bright"] .contact-heading {
+  color: #14131A;
+}
+
+[data-theme="bright"] .contact-item strong {
+  color: #14131A;
+}
+
+[data-theme="bright"] .contact-item p {
+  color: #565360;
+}
+
+[data-theme="bright"] .contact-icon {
+  background: rgba(161, 111, 19, 0.1);
+  border-color: rgba(161, 111, 19, 0.35);
+  color: #7D550A;
+}
+
+[data-theme="bright"] .phone-link {
+  color: #7D550A;
+}
+
+[data-theme="bright"] .map-card {
+  border-color: rgba(161, 111, 19, 0.35);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Footer */
+[data-theme="bright"] .royal-footer {
+  background: #E8E3D5;
+  border-top: 1px solid rgba(161, 111, 19, 0.25);
+  color: #4A4652;
+}
+
+[data-theme="bright"] .footer-brand-title {
+  color: #14131A;
+}
+
+[data-theme="bright"] .footer-desc {
+  color: #565360;
+}
+
+[data-theme="bright"] .footer-heading {
+  color: #14131A;
+}
+
+[data-theme="bright"] .footer-links a {
+  color: #565360;
+}
+
+[data-theme="bright"] .footer-links a:hover {
+  color: #7D550A;
+}
+
+[data-theme="bright"] .footer-phone a,
+[data-theme="bright"] .footer-email a {
+  color: #7D550A;
+}
+
+[data-theme="bright"] .footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: #7C7888;
+}
+
+/* Modals */
+[data-theme="bright"] .modal-backdrop {
+  background: rgba(20, 18, 15, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="bright"] .modal-dialog {
+  background: radial-gradient(circle at 50% 0%, #FFFFFF 0%, #FBF9F4 100%);
+  border-color: rgba(161, 111, 19, 0.4);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.16);
+}
+
+[data-theme="bright"] .modal-close {
+  color: #6B6775;
+}
+
+[data-theme="bright"] .modal-close:hover {
+  color: #7D550A;
+}
+
+[data-theme="bright"] .modal-title {
+  color: #14131A;
+}
+
+[data-theme="bright"] .modal-desc {
+  color: #565360;
+}
+
+[data-theme="bright"] .modal-specs-list {
+  background: #F7F5EE;
+  border-color: rgba(161, 111, 19, 0.2);
+}
+
+[data-theme="bright"] .spec-line span:first-child {
+  color: #565360;
+}
+
+[data-theme="bright"] .spec-line span:last-child {
+  color: #7D550A;
+}
+
+[data-theme="bright"] .pill-btn {
+  background: #F7F5EE;
+  border-color: rgba(161, 111, 19, 0.25);
+}
+
+[data-theme="bright"] .pill-btn.active {
+  background: rgba(161, 111, 19, 0.14);
+  border-color: var(--gold-500);
+}
+
+[data-theme="bright"] .pill-title {
+  color: #14131A;
+}
+
+[data-theme="bright"] .pill-btn.active .pill-title {
+  color: #7D550A;
+}
+
+[data-theme="bright"] .summary-card-inner {
+  background: #F7F5EE;
+  border-color: rgba(161, 111, 19, 0.3);
+}
+
+[data-theme="bright"] .summary-row {
+  color: #565360;
+}
+
+[data-theme="bright"] .row-val {
+  color: #14131A;
+  font-weight: 700;
+}
+
+[data-theme="bright"] .total-title {
+  color: #565360;
+}
+
+[data-theme="bright"] .luxury-select {
+  background: #F7F5EE;
+  border-color: rgba(161, 111, 19, 0.3);
+  color: #14131A;
+}
+
+[data-theme="bright"] .weight-input-box {
+  background: #F7F5EE;
+  border-color: rgba(161, 111, 19, 0.3);
+}
+
+[data-theme="bright"] .weight-input-box input {
+  color: #14131A;
+}
+
+[data-theme="bright"] .preset-btn {
+  background: #FFFFFF;
+  border-color: rgba(161, 111, 19, 0.25);
+  color: #26242C;
+}
+
 

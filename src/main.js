@@ -672,10 +672,59 @@ function initNavigation() {
 }
 
 /* ==========================================================
+   ROYAL THEME CONTROLLER (BRIGHT / DARK THEME TOGGLE)
+   ========================================================== */
+function initThemeToggle() {
+  const btnToggle = document.getElementById('btn-theme-toggle');
+  const mobileToggle = document.getElementById('mobile-theme-toggle');
+  const mobileStatusText = document.getElementById('mobile-theme-status-text');
+
+  // Read saved theme or default to 'dark'
+  let currentTheme = localStorage.getItem('swarna_theme') || 'dark';
+
+  function applyTheme(theme, playSound = false) {
+    currentTheme = theme;
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('swarna_theme', theme);
+    } catch {}
+
+    const isBright = theme === 'bright';
+
+    if (btnToggle) {
+      btnToggle.setAttribute('title', isBright ? 'Switch to Dark Royal Theme' : 'Switch to Bright Royal Theme');
+      btnToggle.setAttribute('aria-label', isBright ? 'Switch to Dark Royal Theme' : 'Switch to Bright Royal Theme');
+    }
+
+    if (mobileStatusText) {
+      mobileStatusText.textContent = isBright ? 'Switch to Dark Theme' : 'Switch to Bright Theme';
+    }
+
+    if (playSound) {
+      playRoyalChime();
+    }
+
+    createIcons({ icons });
+  }
+
+  // Initial application
+  applyTheme(currentTheme, false);
+
+  function handleToggle() {
+    const nextTheme = currentTheme === 'bright' ? 'dark' : 'bright';
+    applyTheme(nextTheme, true);
+  }
+
+  btnToggle?.addEventListener('click', handleToggle);
+  mobileToggle?.addEventListener('click', handleToggle);
+}
+
+/* ==========================================================
    DOCUMENT READY ENTRY POINT
    ========================================================== */
 document.addEventListener('DOMContentLoaded', () => {
   initIcons();
+  initThemeToggle();
   initRoyalIntro();
 
   initHeroShowcase();

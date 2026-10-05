@@ -26,6 +26,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/src/style.css">
+
+  <!-- Instant Theme Initializer (prevents theme flash on reload) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('swarna_theme');
+        if (saved === 'bright') {
+          document.documentElement.setAttribute('data-theme', 'bright');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body class="royal-body">
   
@@ -134,6 +148,11 @@
 
       <!-- Action Buttons -->
       <div class="navbar-actions">
+        <!-- Royal Theme Mode Toggle (Bright / Dark) -->
+        <button id="btn-theme-toggle" class="nav-icon-btn theme-toggle-btn" title="Toggle Bright / Dark Royal Theme" aria-label="Toggle Bright / Dark Royal Theme">
+          <i data-lucide="sun" class="icon-xs theme-icon-sun"></i>
+          <i data-lucide="moon" class="icon-xs theme-icon-moon"></i>
+        </button>
         <button id="btn-replay-intro" class="nav-icon-btn" title="Replay Royal Cinematic Intro" aria-label="Replay Intro">
           <i data-lucide="sparkles" class="icon-xs text-gold"></i>
         </button>
@@ -154,6 +173,18 @@
     <!-- Mobile Nav Drawer -->
     <div id="mobile-nav-drawer" class="mobile-nav">
       <ul class="mobile-nav-links">
+        <li class="mobile-theme-item">
+          <button type="button" id="mobile-theme-toggle" class="mobile-theme-btn" aria-label="Switch between Bright and Dark theme">
+            <span class="mobile-theme-label">
+              <i data-lucide="sun" class="icon-xs theme-icon-sun"></i>
+              <i data-lucide="moon" class="icon-xs theme-icon-moon"></i>
+              <span id="mobile-theme-status-text">Bright Theme</span>
+            </span>
+            <span class="theme-pill-track">
+              <span class="theme-pill-thumb"></span>
+            </span>
+          </button>
+        </li>
         <li><a href="#collections" class="mobile-link">Signature Collections</a></li>
         <li><a href="#hallmarks" class="mobile-link">The 4 Purity Hallmarks</a></li>
         <li><button type="button" class="mobile-link mobile-btn-link" data-open-calc>Gold Rate Estimator</button></li>
