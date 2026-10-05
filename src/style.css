@@ -4538,4 +4538,164 @@ html[data-theme="bright"] {
   color: #7D550A !important;
 }
 
+/* ============================================================
+   COMPACT HALLMARK BULLET POINTS (replaces the 4 large pillar cards)
+   ============================================================ */
+.hallmarks-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hallmark-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+}
+
+.hpt-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--gold-300);
+  margin-top: 2px;
+}
+
+.hpt-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hpt-text strong {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-pure);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
+.hpt-text span {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 576px) {
+  .hallmarks-points {
+    grid-template-columns: 1fr;
+  }
+  .hallmark-point {
+    padding: 0.75rem 0.85rem;
+  }
+}
+
+/* Bright theme overrides for hallmarks-points */
+[data-theme="bright"] .hallmark-point {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(161, 111, 19, 0.2) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="bright"] .hpt-icon {
+  color: #8C600E !important;
+}
+
+[data-theme="bright"] .hpt-text strong {
+  color: #14131A !important;
+}
+
+[data-theme="bright"] .hpt-text span {
+  color: #565360 !important;
+}
+
+/* ============================================================
+   COMPACT REVIEW CARDS
+   ============================================================ */
+.review-card {
+  padding: 1.1rem 1.15rem !important;
+}
+
+.review-stars {
+  font-size: 0.8rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.review-quote {
+  font-size: 0.82rem !important;
+  line-height: 1.5 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.reviewer-info {
+  padding-top: 0.6rem !important;
+  margin-top: 0.6rem !important;
+}
+
+.reviewer-avatar {
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 0.7rem !important;
+}
+
+.reviewer-name {
+  font-size: 0.8rem !important;
+}
+
+.reviewer-city {
+  font-size: 0.72rem !important;
+}
+
+/* ============================================================
+   BRIGHT THEME: FIX DARK FORM INPUTS
+   ============================================================ */
+[data-theme="bright"] .form-input,
+[data-theme="bright"] .form-select,
+[data-theme="bright"] .form-textarea,
+[data-theme="bright"] input[type="text"],
+[data-theme="bright"] input[type="tel"],
+[data-theme="bright"] input[type="date"],
+[data-theme="bright"] select,
+[data-theme="bright"] textarea {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  border: 1.5px solid rgba(161, 111, 19, 0.3) !important;
+  color: #14131A !important;
+  color-scheme: light !important;
+}
+
+[data-theme="bright"] .form-input::placeholder,
+[data-theme="bright"] .form-textarea::placeholder,
+[data-theme="bright"] input[type="text"]::placeholder,
+[data-theme="bright"] input[type="tel"]::placeholder,
+[data-theme="bright"] textarea::placeholder {
+  color: #A09CA8 !important;
+}
+
+[data-theme="bright"] .form-input:focus,
+[data-theme="bright"] .form-select:focus,
+[data-theme="bright"] .form-textarea:focus,
+[data-theme="bright"] input:focus,
+[data-theme="bright"] select:focus,
+[data-theme="bright"] textarea:focus {
+  background: #FDFCF9 !important;
+  border-color: #B8860B !important;
+  box-shadow: 0 0 0 3px rgba(161, 111, 19, 0.12) !important;
+}
+
+/* Appointment box */
+[data-theme="bright"] .appointment-box,
+[data-theme="bright"] .royal-form {
+  background: #FFFFFF !important;
+  background-image: none !important;
+}
+
+
 
